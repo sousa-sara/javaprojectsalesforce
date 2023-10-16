@@ -1,4 +1,3 @@
-# javaprojectsalesforce
 # Formulários de Cadastro e Login - Salesforce
 
 Construção inicial do backend para as páginas:  “Login”, “Teste Grátis” e “Entre em Contato”, com foco na experiência do usuário e validação dos dados de entrada.

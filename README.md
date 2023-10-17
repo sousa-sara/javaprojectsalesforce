@@ -88,13 +88,13 @@ Este projeto tem como foco central aprimorar a experiência do usuário, simplif
 - A caixa de diálogo abaixo pedirá que digite o nome do usuário:
 
 <div align="center">
-<img src="./ImagensReadme/img (16).png" />
+<img src="./ImagensReadme/img (16).png" width="250" height="100" />
 </div>
 
 - Se o usuário clicar em “OK” sem nenhum conteúdo dentro da caixa de diálogo, será emitida a seguinte mensagem:
 
 <div align="center">
-<img src="./ImagensReadme/img (19).png" />
+<img src="./ImagensReadme/img (19).png" width="250" height="100" />
 </div>
 
 ***Obs.:** Essa configuração para a validação do nome se repete para a página “Entre em Contato”.
@@ -102,7 +102,7 @@ Este projeto tem como foco central aprimorar a experiência do usuário, simplif
 - A caixa de diálogo abaixo pedirá que digite o sobrenome do usuário:
 
 <div align="center">
-<img src="./ImagensReadme/img (14).png" />
+<img src="./ImagensReadme/img (14).png" width="250" height="100" />
 </div>
 
 - Porém, diferente das caixas de diálogos anteriores, o sobrenome não é obrigatório e pode ter uma entrada vazia. Sendo assim, se o usuário deixar o campo vazio, seguirá para a próxima caixa de diálogo.
@@ -112,31 +112,31 @@ Este projeto tem como foco central aprimorar a experiência do usuário, simplif
 - A caixa de diálogo abaixo pedirá que digite o porte da empresa do usuário (a entrada do usuário irá passar por condicionais que retornará o porte de acordo com uma quantidade pré-definida):
 
 <div align="center">
-<img src="./ImagensReadme/img (6).png" />
+<img src="./ImagensReadme/img (6).png" width="250" height="100"/>
 </div>
 
 - A caixa de diálogo abaixo pedirá que digite o país do usuário:
 
 <div align="center">
-<img src="./ImagensReadme/img (10).png" />
+<img src="./ImagensReadme/img (10).png" width="250" height="100" />
 </div>
 
 - Se o usuário clicar em “OK” sem nenhum conteúdo dentro da caixa de diálogo, será emitida a seguinte mensagem:
 
 <div align="center">
-<img src="./ImagensReadme/img (21).png" />
+<img src="./ImagensReadme/img (21).png" width="250" height="100" />
 </div>
 
 - A caixa de diálogo abaixo pedirá que digite o idioma do usuário:
 
 <div align="center">
-<img src="./ImagensReadme/img (11).png" />
+<img src="./ImagensReadme/img (11).png" width="250" height="100"/>
 </div>
 
 - Se o usuário clicar em “OK” sem nenhum conteúdo dentro da caixa de diálogo, será emitida a seguinte mensagem:
 
 <div align="center">
-<img src="./ImagensReadme/img (18).png" />
+<img src="./ImagensReadme/img (18).png" width="250" height="100" />
 </div>
 
 → As caixas de diálogos a seguir serão referentes às informações de contato (código do país, DDD e número de telefone) da página “Teste Grátis”.
@@ -144,37 +144,37 @@ Este projeto tem como foco central aprimorar a experiência do usuário, simplif
 - A caixa de diálogo abaixo pedirá que digite o código do país do usuário:
 
 <div align="center">
-<img src="./ImagensReadme/img (12).png" />
+<img src="./ImagensReadme/img (12).png" width="250" height="100"/>
 </div>
 
 - Se o usuário digitar o código do país fora do intervalo de 1 a 999, será emitida a seguinte mensagem:
 
 <div align="center">
-<img src="./ImagensReadme/img (7).png" />
+<img src="./ImagensReadme/img (7).png" width="250" height="100"/>
 </div>
 
 - A caixa de diálogo abaixo pedirá que digite o DDD do usuário:
 
 <div align="center">
-<img src="./ImagensReadme/img (15).png" />
+<img src="./ImagensReadme/img (15).png" width="250" height="100" />
 </div>
 
 - Se o usuário digitar o DDD e não possuir três dígitos numéricos, será emitida a seguinte mensagem:
 
 <div align="center">
-<img src="./ImagensReadme/img (5).png" />
+<img src="./ImagensReadme/img (5).png" width="250" height="100" />
 </div>
 
 - A caixa de diálogo abaixo pedirá que digite o número do usuário:
 
 <div align="center">
-<img src="./ImagensReadme/img (13).png" />
+<img src="./ImagensReadme/img (13).png" width="250" height="100" />
 </div>
 
 - Se o usuário digitar o número e não possuir oito dígitos numéricos, será emitida a seguinte mensagem:
 
 <div align="center">
-<img src="./ImagensReadme/img (22).png" />
+<img src="./ImagensReadme/img (22).png" width="250" height="100"/>
 </div>
 
 ***Obs.:** Essa configuração para a validação do telefone se repete para a página “Entre em Contato”.
@@ -182,7 +182,7 @@ Este projeto tem como foco central aprimorar a experiência do usuário, simplif
 - Informa-se abaixo o retorno de cada método de validação quando se preenche corretamente todas as entradas de dados declaradas na caixa de diálogo do JOptionPane:
 
 <div align="center">
-<img src="./ImagensReadme/img (2).png" />
+<img src="./ImagensReadme/img (2).png" width="150" height="350"/>
 </div>
 
 # Referências

@@ -10,9 +10,11 @@ Construção inicial do backend para as páginas:  “Login”, “Teste Grátis
 
 # UML: **Diagrama de Classes**
 
+
 <div align="center">
     <img  width="708px" src="./ImagensReadme/img (1).png" />
 </div>
+
 
 # **Objetivo do Projeto**
 
@@ -47,63 +49,81 @@ Este projeto tem como foco central aprimorar a experiência do usuário, simplif
 
 - Informa-se abaixo o retorno padrão de cada método de validação quando se cancela todas as entradas de dados declaradas na caixa de diálogo do JOptionPane:
 
+
 <div align="center">
 <img src="./ImagensReadme/img (3).png" width="150" height="350">
 </div>
 
+
 - Após a execução do sistema, a primeira caixa de diálogo será referente à página de “Login” no qual pedirá que digite o e-mail do usuário:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (9).png" width="250" height="100" />
 </div>
 
+
 - Se o usuário clicar em “OK” sem nenhum conteúdo dentro da caixa de diálogo, será emitida a seguinte mensagem:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (20).png" width="250" height="100" />
 </div>
 
+
 - Além disso, se for digitado o e-mail com um formato que não obedeça sua expressão regular (RegEx), será emitida a seguinte mensagem:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (17).png" width="250" height="100" />
 </div>
 
+
 ***Obs.:** Essa configuração para a validação do e-mail se repete para as páginas “Teste Grátis” e “Entre em Contato”.
 
 - A segunda caixa de diálogo também será referente à página de login no qual pedirá que digite a senha do usuário:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (8).png" width="250" height="100" />
 </div>
 
+
 - Se for digitada a senha com um formato que não obedeça a quantidade mínima de caracteres, será emitida a seguinte mensagem:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (4).png" width="250" height="100" />
 </div>
 
+
 → As caixas de diálogos a seguir serão referentes à página “Teste Grátis”.
 
 - A caixa de diálogo abaixo pedirá que digite o nome do usuário:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (16).png" width="250" height="100" />
 </div>
 
+
 - Se o usuário clicar em “OK” sem nenhum conteúdo dentro da caixa de diálogo, será emitida a seguinte mensagem:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (19).png" width="250" height="100" />
 </div>
 
+
 ***Obs.:** Essa configuração para a validação do nome se repete para a página “Entre em Contato”.
 
 - A caixa de diálogo abaixo pedirá que digite o sobrenome do usuário:
 
+
 <div align="center">
 <img src="./ImagensReadme/img (14).png" width="250" height="100" />
 </div>
+
 
 - Porém, diferente das caixas de diálogos anteriores, o sobrenome não é obrigatório e pode ter uma entrada vazia. Sendo assim, se o usuário deixar o campo vazio, seguirá para a próxima caixa de diálogo.
 
@@ -111,79 +131,103 @@ Este projeto tem como foco central aprimorar a experiência do usuário, simplif
 
 - A caixa de diálogo abaixo pedirá que digite o porte da empresa do usuário (a entrada do usuário irá passar por condicionais que retornará o porte de acordo com uma quantidade pré-definida):
 
+
 <div align="center">
 <img src="./ImagensReadme/img (6).png" width="250" height="100"/>
 </div>
 
+
 - A caixa de diálogo abaixo pedirá que digite o país do usuário:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (10).png" width="250" height="100" />
 </div>
 
+
 - Se o usuário clicar em “OK” sem nenhum conteúdo dentro da caixa de diálogo, será emitida a seguinte mensagem:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (21).png" width="250" height="100" />
 </div>
 
+
 - A caixa de diálogo abaixo pedirá que digite o idioma do usuário:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (11).png" width="250" height="100"/>
 </div>
 
+
 - Se o usuário clicar em “OK” sem nenhum conteúdo dentro da caixa de diálogo, será emitida a seguinte mensagem:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (18).png" width="250" height="100" />
 </div>
 
+
 → As caixas de diálogos a seguir serão referentes às informações de contato (código do país, DDD e número de telefone) da página “Teste Grátis”.
 
 - A caixa de diálogo abaixo pedirá que digite o código do país do usuário:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (12).png" width="250" height="100"/>
 </div>
 
+
 - Se o usuário digitar o código do país fora do intervalo de 1 a 999, será emitida a seguinte mensagem:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (7).png" width="250" height="100"/>
 </div>
 
+
 - A caixa de diálogo abaixo pedirá que digite o DDD do usuário:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (15).png" width="250" height="100" />
 </div>
 
+
 - Se o usuário digitar o DDD e não possuir três dígitos numéricos, será emitida a seguinte mensagem:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (5).png" width="250" height="100" />
 </div>
 
+
 - A caixa de diálogo abaixo pedirá que digite o número do usuário:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (13).png" width="250" height="100" />
 </div>
 
+
 - Se o usuário digitar o número e não possuir oito dígitos numéricos, será emitida a seguinte mensagem:
+
 
 <div align="center">
 <img src="./ImagensReadme/img (22).png" width="250" height="100"/>
 </div>
 
+
 ***Obs.:** Essa configuração para a validação do telefone se repete para a página “Entre em Contato”.
 
 - Informa-se abaixo o retorno de cada método de validação quando se preenche corretamente todas as entradas de dados declaradas na caixa de diálogo do JOptionPane:
 
+
 <div align="center">
 <img src="./ImagensReadme/img (2).png" width="150" height="350"/>
 </div>
+
 
 # Referências
 

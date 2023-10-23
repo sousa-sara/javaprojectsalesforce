@@ -270,6 +270,13 @@ Este projeto tem como foco central aprimorar a experiência do usuário, simplif
 
 <br/>
 
+## Desenvolvedores
+
+Débora Costa
+
+Leonardo de Oliveira
+
+Sara Sousa
 
 ## Referências
 

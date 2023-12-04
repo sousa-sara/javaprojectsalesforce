@@ -1,0 +1,206 @@
+import javax.swing.*;
+import java.util.ArrayList;
+
+public class MainCadastro {
+
+    public static void main(String[] args) {
+        ArrayList<EntreEmContato> listaEntreEmContato = new ArrayList<>();
+        ArrayList<UsuarioTesteGratis> listaUsuarioTesteGratis = new ArrayList<>();
+
+        while (true) {
+            String[] opcoes = {"Cadastrar EntreEmContato", "Cadastrar UsuarioTesteGratis", "Listar EntreEmContatos", "Listar UsuarioTesteGratis", "Sair"};
+            int escolha = JOptionPane.showOptionDialog(null, "Escolha uma opção:", "Menu",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, opcoes, opcoes[0]);
+
+            switch (escolha) {
+                case 0:
+                    cadastrarEntreEmContato(listaEntreEmContato);
+                    break;
+                case 1:
+                    cadastrarUsuarioTesteGratis(listaUsuarioTesteGratis);
+                    break;
+                case 2:
+                    listarEntreEmContatos(listaEntreEmContato);
+                    break;
+                case 3:
+                    listarUsuarioTesteGratis(listaUsuarioTesteGratis);
+                    break;
+                case 4:
+                    JOptionPane.showMessageDialog(null, "Saindo do programa.");
+                    System.exit(0);
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, escolha uma opção válida.\n");
+                    break;
+            }
+        }
+    }
+
+    public static void cadastrarEntreEmContato(ArrayList<EntreEmContato> listaEntreEmContato) {
+        // ... (código para cadastrar EntreEmContato)
+    }
+
+    public static void cadastrarUsuarioTesteGratis(ArrayList<UsuarioTesteGratis> listaUsuarioTesteGratis) {
+        // ... (código para cadastrar UsuarioTesteGratis)
+    }
+
+    public static void listarEntreEmContatos(ArrayList<EntreEmContato> listaEntreEmContato) {
+        if (listaEntreEmContato.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nenhum EntreEmContato cadastrado.\n");
+        } else {
+            StringBuilder contatosText = new StringBuilder("Listando EntreEmContatos:\n");
+            for (EntreEmContato contato : listaEntreEmContato) {
+                contatosText.append("ID: ").append(contato.getId()).append(", Nome: ").append(contato.getNome())
+                        .append(", Email: ").append(contato.getEmail()).append(", Telefone: ")
+                        .append(contato.getTelefone().getCodigoPais()).append(contato.getTelefone().getDdd())
+                        .append(contato.getTelefone().getNumero()).append("\n");
+            }
+            JOptionPane.showMessageDialog(null, contatosText.toString());
+        }
+    }
+
+    public static void listarUsuarioTesteGratis(ArrayList<UsuarioTesteGratis> listaUsuarioTesteGratis) {
+        if (listaUsuarioTesteGratis.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nenhum UsuarioTesteGratis cadastrado.\n");
+        } else {
+            StringBuilder usuariosText = new StringBuilder("Listando UsuarioTesteGratis:\n");
+            for (UsuarioTesteGratis usuario : listaUsuarioTesteGratis) {
+                usuariosText.append("ID: ").append(usuario.getId()).append(", Nome: ").append(usuario.getNome())
+                        .append(", Sobrenome: ").append(usuario.getSobrenome()).append(", Email: ")
+                        .append(usuario.getEmail()).append(", Código do País: ").append(usuario.getCodigoPais())
+                        .append(", DDD: ").append(usuario.getDdd()).append(", Número: ").append(usuario.getNumero())
+                        .append(", Nome da Empresa: ").append(usuario.getNomeEmpresa())
+                        .append(", Porte da Empresa: ").append(usuario.getPorteEmpresa()).append(", País: ")
+                        .append(usuario.getPais()).append(", Idioma: ").append(usuario.getIdioma()).append("\n");
+            }
+            JOptionPane.showMessageDialog(null, usuariosText.toString());
+        }
+    }
+
+    class Telefone {
+        private int codigoPais;
+        private String ddd;
+        private String numero;
+
+        public Telefone(int codigoPais, String ddd, String numero) {
+            this.codigoPais = codigoPais;
+            this.ddd = ddd;
+            this.numero = numero;
+        }
+
+        public int getCodigoPais() {
+            return codigoPais;
+        }
+
+        public String getDdd() {
+            return ddd;
+        }
+
+        public String getNumero() {
+            return numero;
+        }
+    }
+
+    class EntreEmContato {
+        private long id;
+        private String nome;
+        private String email;
+        private Telefone telefone;
+
+        public EntreEmContato(long id, String nome, String email, Telefone telefone) {
+            this.id = id;
+            this.nome = nome;
+            this.email = email;
+            this.telefone = telefone;
+        }
+
+        public long getId() {
+            return id;
+        }
+
+        public String getNome() {
+            return nome;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public Telefone getTelefone() {
+            return telefone;
+        }
+    }
+
+    class UsuarioTesteGratis {
+        private long id;
+        private String nome;
+        private String sobrenome;
+        private String email;
+        private int codigoPais;
+        private String ddd;
+        private String numero;
+        private String nomeEmpresa;
+        private int porteEmpresa;
+        private String pais;
+        private String idioma;
+
+        public UsuarioTesteGratis(long id, String nome, String sobrenome, String email,
+                                  int codigoPais, String ddd, String numero,
+                                  String nomeEmpresa, int porteEmpresa, String pais, String idioma) {
+            this.id = id;
+            this.nome = nome;
+            this.sobrenome = sobrenome;
+            this.email = email;
+            this.codigoPais = codigoPais;
+            this.ddd = ddd;
+            this.numero = numero;
+            this.nomeEmpresa = nomeEmpresa;
+            this.porteEmpresa = porteEmpresa;
+            this.pais = pais;
+            this.idioma = idioma;
+        }
+
+        public long getId() {
+            return id;
+        }
+
+        public String getNome() {
+            return nome;
+        }
+
+        public String getSobrenome() {
+            return sobrenome;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public int getCodigoPais() {
+            return codigoPais;
+        }
+
+        public String getDdd() {
+            return ddd;
+        }
+
+        public String getNumero() {
+            return numero;
+        }
+
+        public String getNomeEmpresa() {
+            return nomeEmpresa;
+        }
+
+        public int getPorteEmpresa() {
+            return porteEmpresa;
+        }
+
+        public String getPais() {
+            return pais;
+        }
+
+        public String getIdioma() {
+            return idioma;
+        }
+    }
+}

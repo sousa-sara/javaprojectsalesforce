@@ -1,0 +1,200 @@
+package br.com.fiap.main;
+
+import javax.swing.*;
+import java.util.ArrayList;
+
+public class UsuarioTesteGratis {
+    private long id;
+    private String nome;
+    private String sobrenome;
+    private String email;
+    private Telefone telefone;
+    private String nomeEmpresa;
+    private int porteEmpresa;
+    private String pais;
+    private String idioma;
+
+    
+    public UsuarioTesteGratis() {
+		super();
+	}
+
+	// Construtor
+    public UsuarioTesteGratis(long id, String nome, String sobrenome, String email, Telefone telefone,
+                              String nomeEmpresa, int porteEmpresa, String pais, String idioma) {
+        this.id = id;
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.email = email;
+        this.telefone = telefone;
+        this.nomeEmpresa = nomeEmpresa;
+        this.porteEmpresa = porteEmpresa;
+        this.pais = pais;
+        this.idioma = idioma;
+    }
+
+    // Métodos de validação
+    public String validarNome() {
+        // Lógica de validação do nome
+        if (nome == null || nome.trim().isEmpty()) {
+            return "Nome inválido";
+        }
+        return "Nome válido";
+    }
+
+    public String validarSobrenome() {
+        // Lógica de validação do sobrenome
+        if (sobrenome == null || sobrenome.trim().isEmpty()) {
+            return "Sobrenome inválido";
+        }
+        return "Sobrenome válido";
+    }
+
+    public String validarEmail() {
+        // Lógica de validação do email
+        if (email == null || !email.contains("@")) {
+            return "Email inválido";
+        }
+        return "Email válido";
+    }
+
+    public String validarNomeEmpresa() {
+        // Lógica de validação do nome da empresa
+        if (nomeEmpresa == null || nomeEmpresa.trim().isEmpty()) {
+            return "Nome da empresa inválido";
+        }
+        return "Nome da empresa válido";
+    }
+
+    public String validarPorteEmpresa() {
+        // Lógica de validação do porte da empresa
+        if (porteEmpresa <= 0) {
+            return "Porte da empresa inválido";
+        }
+        return "Porte da empresa válido";
+    }
+
+    public String validarPais() {
+        // Lógica de validação do país
+        if (pais == null || pais.trim().isEmpty()) {
+            return "País inválido";
+        }
+        return "País válido";
+    }
+
+    public String validarIdioma() {
+        // Lógica de validação do idioma
+        if (idioma == null || idioma.trim().isEmpty()) {
+            return "Idioma inválido";
+        }
+        return "Idioma válido";
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    // Getters e Setters para os atributos
+    // ...
+
+    public static void main(String[] args) {
+        ArrayList<UsuarioTesteGratis> listaDeUsuarios = new ArrayList<>();
+
+        while (true) {
+            String[] opcoes = {"Cadastrar", "Listar Todos os Usuários", "Sair"};
+            int escolha = JOptionPane.showOptionDialog(null, "Escolha uma opção:", "Menu",
+                    JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, opcoes, opcoes[0]);
+
+            switch (escolha) {
+                case 0:
+                    cadastrarUsuario(listaDeUsuarios);
+                    break;
+                case 1:
+                    listarTodosUsuarios(listaDeUsuarios);
+                    break;
+                case 2:
+                    JOptionPane.showMessageDialog(null, "Saindo do programa.");
+                    System.exit(0);
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção inválida. Por favor, escolha uma opção válida.\n");
+                    break;
+            }
+        }
+    }
+
+    public static void cadastrarUsuario(ArrayList<UsuarioTesteGratis> listaDeUsuarios) {
+        long id = Long.parseLong(JOptionPane.showInputDialog("Digite o ID:"));
+        String nome = JOptionPane.showInputDialog("Digite o nome:");
+        String sobrenome = JOptionPane.showInputDialog("Digite o sobrenome:");
+        String email = JOptionPane.showInputDialog("Digite o email:");
+
+        int codigoPais = Integer.parseInt(JOptionPane.showInputDialog("Digite o código do país:"));
+        String ddd = JOptionPane.showInputDialog("Digite o DDD:");
+        String numero = JOptionPane.showInputDialog("Digite o número:");
+
+        Telefone telefone = new Telefone(codigoPais, ddd, numero);
+
+        String nomeEmpresa = JOptionPane.showInputDialog("Digite o nome da empresa:");
+        int porteEmpresa = Integer.parseInt(JOptionPane.showInputDialog("Digite o porte da empresa:"));
+        String pais = JOptionPane.showInputDialog("Digite o país:");
+        String idioma = JOptionPane.showInputDialog("Digite o idioma:");
+
+        UsuarioTesteGratis novoUsuario = new UsuarioTesteGratis(id, nome, sobrenome, email, telefone,
+                nomeEmpresa, porteEmpresa, pais, idioma);
+
+        listaDeUsuarios.add(novoUsuario);
+        JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!\n");
+    }
+
+    public static void listarTodosUsuarios(ArrayList<UsuarioTesteGratis> listaDeUsuarios) {
+        if (listaDeUsuarios.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Nenhum usuário encontrado.\n");
+        } else {
+            StringBuilder usuariosText = new StringBuilder("Listando todos os usuários:\n");
+            for (UsuarioTesteGratis usuario : listaDeUsuarios) {
+                usuariosText.append("ID: ").append(usuario.getId()).append(", Nome: ").append(usuario.getNome())
+                        .append(", Sobrenome: ").append(usuario.getSobrenome()).append(", Email: ")
+                        .append(usuario.getEmail()).append(", Nome da Empresa: ").append(usuario.getNomeEmpresa())
+                        .append(", Porte da Empresa: ").append(usuario.getPorteEmpresa()).append(", País: ")
+                        .append(usuario.getPais()).append(", Idioma: ").append(usuario.getIdioma()).append("\n");
+            }
+            JOptionPane.showMessageDialog(null, usuariosText.toString());
+        }
+    }
+}
+
+class Telefone {
+    private int codigoPais;
+    private String ddd;
+    private String numero;
+
+    // Construtor
+    public Telefone(int codigoPais, String ddd, String numero) {
+        this.codigoPais = codigoPais;
+        this.ddd = ddd;
+        this.numero = numero;
+    }
+
+    // Métodos de validação
+    public int validarCodigoPais() {
+        // Lógica de validação do código do país
+        return codigoPais;
+    }
+
+    public String validarDdd() {
+        // Lógica de validação do DDD
+        return ddd;
+    }
+
+    public String validarNumero() {
+        // Lógica de validação do número
+        return numero;
+    }
+
+    // Getters e Setters para os atributos
+    // ...
+
+    public int getCodigoPais() {
+        return codigoPais;
+    }
+}

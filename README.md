@@ -63,11 +63,11 @@ Vamos seguir um exemplo de interação com o programa, mostrando como um usuári
 
 *Listar: Teste Grátis*
 
-Uma caixa de diálogo exibirá informações sobre os usuários de teste grátis, incluindo ID, nome, sobrenome, e-mail, telefone, nome da empresa, porte da empresa, país e idioma.
+- Uma caixa de diálogo exibirá informações sobre os usuários de teste grátis, incluindo ID, nome, sobrenome, e-mail, telefone, nome da empresa, porte da empresa, país e idioma.
 
 *Sair*
 
-Uma mensagem será exibida: "Saindo do programa."
+- Uma mensagem será exibida: "Saindo do programa."
 
 ## Desenvolvedores
 

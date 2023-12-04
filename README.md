@@ -1,4 +1,4 @@
-# Formulários de Cadastro - Salesforce
+# Cadastro e Listagem - Salesforce
 
 O projeto é um programa de console para cadastro e listagem das páginas "Entre em Contato" e "Teste Grátis" da empresa Salesforce, utilizando a linguagem de programação Java.
 
